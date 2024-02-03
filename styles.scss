@@ -3,12 +3,17 @@
     height: 90vh;
 }
 
+
 $background_color_section_navbar: #242427;
 $background_color_section_welcome: #515d6c;
 $background_color_section_projects: #a4a7b7;
 $background_color_section_contacts: #e8dfef;
 
 $text_color_gray: #a4a7b7;
+
+html {
+    scroll-behavior: smooth;
+}
 
 body, 
 ul {
@@ -28,6 +33,7 @@ p {
     position: sticky;
     top: 0;
     height: 10vh;
+    z-index: 1;
     a, li, ul {
         display: flex
     }
@@ -61,6 +67,7 @@ p {
     background-color: $background_color_section_projects;
     h1 {
         text-align: center;
+        margin-top: 0;
     }
     .project_card_wrapper {
         margin: 0 10px 0 10px;
@@ -104,7 +111,6 @@ p {
         }
     }
 }
-
 
 #section_contacts {
     @include section_height;
