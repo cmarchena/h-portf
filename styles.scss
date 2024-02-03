@@ -1,0 +1,67 @@
+@mixin section_height {
+    padding-top: 10vh;
+    height: 90vh;
+}
+
+$background_color_section_navbar: #242427;
+$background_color_section_welcome: #515d6c;
+$background_color_section_projects: #a4a7b7;
+$background_color_section_contacts: #e8dfef;
+
+$text_color_gray: #a4a7b7;
+
+body, 
+ul {
+    margin: 0;
+}
+
+#navbar {
+    background-color: $background_color_section_navbar;
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    a, li, ul {
+        display: flex
+    }
+    a {
+        align-items: center;
+        font-size: 1.5em;
+        text-decoration: none;
+        color: $text_color_gray;
+    }
+    li {
+        margin: 0 0.50em 0 0.50em;
+    }
+    ul {
+        justify-content: flex-end;
+        height: 100%;
+        list-style-type: none;
+    }
+}
+
+#section_welcome {
+    @include section_height;
+    background-color: $background_color_section_welcome;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 3em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+}
+
+#section_projects {
+    @include section_height;
+    background-color: $background_color_section_projects;
+}
+
+#section_contacts {
+    @include section_height;
+    background-color: $background_color_section_contacts;
+}
+
+

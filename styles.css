@@ -1,0 +1,56 @@
+body,
+ul {
+  margin: 0;
+}
+
+#navbar {
+  background-color: #242427;
+  position: sticky;
+  top: 0;
+  height: 10vh;
+}
+#navbar a, #navbar li, #navbar ul {
+  display: flex;
+}
+#navbar a {
+  align-items: center;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #a4a7b7;
+}
+#navbar li {
+  margin: 0 0.5em 0 0.5em;
+}
+#navbar ul {
+  justify-content: flex-end;
+  height: 100%;
+  list-style-type: none;
+}
+
+#section_welcome {
+  padding-top: 10vh;
+  height: 90vh;
+  background-color: #515d6c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#section_welcome h1 {
+  font-size: 3em;
+}
+#section_welcome p {
+  font-size: 1.5em;
+}
+
+#section_projects {
+  padding-top: 10vh;
+  height: 90vh;
+  background-color: #a4a7b7;
+}
+
+#section_contacts {
+  padding-top: 10vh;
+  height: 90vh;
+  background-color: #e8dfef;
+}/*# sourceMappingURL=styles.css.map */
