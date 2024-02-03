@@ -3,6 +3,11 @@
     height: 90vh;
 }
 
+@mixin w_h_100 {
+    width: 100%;
+    height: 100%;
+}
+
 
 $background_color_section_navbar: #242427;
 $background_color_section_welcome: #515d6c;
@@ -39,9 +44,15 @@ p {
     }
     a {
         align-items: center;
+        justify-content: center;
         font-size: 1.5em;
         text-decoration: none;
         color: $text_color_gray;
+        min-width: 120px;
+        &:hover {
+            background-color: #787878;
+            
+        }
     }
     li {
         margin: 0 0.50em 0 0.50em;
@@ -80,23 +91,21 @@ p {
         position: relative;
         border: black solid 1px;
         img {
-            height: 100%;
-            width: 100%;
+            @include w_h_100;
             object-fit: cover;
         }
         span {
+            @include w_h_100;
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
             background: rgba(0, 0, 0, 0.7);
             display: flex;
             align-items: center;
             justify-content: center;
             color: $text_color_gray;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.5s ease;
         }
         a:hover span {
             opacity: 1;
