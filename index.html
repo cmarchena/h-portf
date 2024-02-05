@@ -9,61 +9,72 @@
 </head>
 
 <body>
-    <nav id="navbar">
-        <ul>
-            <li><a href="#section_welcome">About</a></li>
-            <li><a href="#section_projects">Projects</a></li>
-            <li><a href="#section_contacts">Contacts</a></li>
-        </ul>
-    </nav>
-    <section id="section_welcome">
-        <h1>Hey, I'm Herman</h1>
-        <p>and this is my portfolio page</p>
-    </section>
-    <section id="section_projects">
-        <h1>These are my projects</h1>
-        <div class="project_card_wrapper">
-            <div class="project_card">
-                <a href="https://github.com/Hermxn/front" target="_blank">
-                    <img src="static/tribute_page.png" alt="tribute_page">
-                    <span>Tribute page</span>
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#section_welcome">About</a></li>
+                <li><a href="#section_projects">Projects</a></li>
+                <li><a href="#section_contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section id="section_welcome">
+            <h1>Hey, I'm Herman</h1>
+            <p>and this is my portfolio page</p>
+        </section>
+        <section id="section_projects">
+            <h1>These are my projects</h1>
+            <div class="project_card_wrapper">
+                <div class="project_card">
+                    <!-- The link to the tribute page does not work. Pleas review -->
+                    <a href="https://github.com/Hermxn/front" target="_blank">
+                        <img src="static/tribute_page.png" alt="tribute_page">
+                        <figcaption>Tribute page</figcaption>
+                    </a>
+                </div>
+                <div class="project_card">
+                    <a href="https://github.com/Hermxn/survey_page" target="_blank">
+                        <img src="static/survey_form.png" alt="survey_form">
+                        <figcaption>Survey form</figcaption>
+                    </a>
+                </div>
+                <div class="project_card">
+                    <a href="">
+                        <img src="static/new_projects.png" alt="New_project">
+                        <figcaption>New projects cooming soon</figcaption>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="section_contacts">
+            <h1>And these are my Contacts</h1>
+            <div class="icons">
+                <a href="mailto:hermanhrynko@gmail.com">
+                    <i class="bi-envelope"></i>
+                    <span>Mail</span>
+                </a>
+                <a href="tel:+34647041461" target="_blank">
+                    <i class="bi-telephone"></i>
+                    <span>Call</span>
+                </a>
+                <a href="https://t.me/hermxxxn" target="_blank">
+                    <i class="bi-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://github.com/Hermxn/" target="_blank">
+                    <i class="bi-github"></i>
+                    <span>Github</span>
                 </a>
             </div>
-            <div class="project_card">
-                <a href="https://github.com/Hermxn/survey_page" target="_blank">
-                    <img src="static/survey_form.png" alt="survey_form">
-                    <span>Survey form</span>
-                </a>
-            </div>
-            <div class="project_card">
-                <a href="">
-                    <img src="static/new_projects.png" alt="New_project">
-                    <span>New projects cooming soon</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="section_contacts">
-        <h1>And these are my Contacts</h1>
-        <div class="icons">
-            <a href="mailto:hermanhrynko@gmail.com">
-                <i class="bi-envelope"></i>
-                <span>Mail</span>
-            </a>
-            <a href="tel:+34647041461">
-                <i class="bi-telephone"></i>
-                <span>Call</span>
-            </a>
-            <a href="https://t.me/hermxxxn">
-                <i class="bi-telegram"></i>
-                <span>Telegram</span>
-            </a>
-            <a href="https://github.com/Hermxn/">
-                <i class="bi-github"></i>
-                <span>Github</span>
-            </a>
-        </div>
-    </section>
+        </section> 
+    </main>
+    <footer>
+        <p>©2024</p>
+    </footer>
 </body>
 
 </html>

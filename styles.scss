@@ -1,5 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
+// Breakpoints
+$tablet: 361px;
+$desktop: 769px;
 
 @mixin section_height {
     padding-top: 10vh;
@@ -26,6 +29,7 @@ html {
 body, 
 ul {
     margin: 0;
+    padding:0
 }
 
 h1 {
@@ -35,36 +39,172 @@ h1 {
 p {
     font-size: 1.25em;
 }
-
-#navbar {
+body{
+    position: relative;
+}
+nav {
+    position: fixed;
+    z-index:100;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+nav > * {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
     background-color: $background_color_section_navbar;
-    position: sticky;
-    top: 0;
-    height: 10vh;
-    z-index: 1;
-    a, li, ul {
-        display: flex
-    }
     a {
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5em;
-        text-decoration: none;
         color: $text_color_gray;
-        min-width: 120px;
-        &:hover {
-            background-color: #787878;
-            
+        padding: 2rem;
+        text-decoration: none;
+    }
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+img {
+    width: 100%;
+}
+#section_welcome{
+    min-height: 100vh;
+    background-color: $background_color_section_welcome;
+}
+#section_projects{
+    background-color: $background_color_section_projects;
+}
+figcaption{
+    text-align: center;
+}
+.project_card{
+    margin-bottom: 1rem;
+}
+#section_contacts{
+    background-color: $background_color_section_contacts;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    a {
+        text-decoration: none;
+    }
+}
+
+footer{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+@media screen and (min-width: $tablet) {
+    .project_card_wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 1rem;
+    }
+    .project_card{
+        max-width: 330px;
+    }
+    
+}
+@media screen and (min-width: $desktop) {
+    nav{
+        top: 0;
+        &>*{
+            justify-content: flex-end;
         }
     }
-    li {
-        margin: 0 0.50em 0 0.50em;
+}
+/* 
+@media screen and (max-width: 609px) {
+    #section_projects {
+        height: 135vh;
+        .project_card_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            align-items: center;
+        }
+        .project_card {
+            width: 250px;
+            height: 250px;
+        }
     }
-    ul {
-        justify-content: flex-end;
-        height: 100%;
-        list-style-type: none;
+    #section_contacts {
+        h1 {
+            text-align: center;
+        }
+        .icons {
+            display: flex;
+            flex-direction: column;
+        }
+
     }
+}
+
+@media screen and (min-width: 610px) and (max-width: 799px) {
+    #section_projects {
+        height: 120vh;
+        .project_card_wrapper {
+            grid-auto-rows: 30vh;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .project_card {
+            min-width: 280px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    #section_projects {
+        .project_card_wrapper {
+            grid-auto-rows: 50vh;
+        }
+        .project_card {
+            min-width: 180px;
+        }
+    }
+}
+@media screen and (min-width: $tablet) {
+    nav {
+        background-color: $background_color_section_navbar;
+        position: sticky;
+        top: 0;
+        height: 10vh;
+        z-index: 1;
+        a, li, ul {
+            display: flex
+        }
+        a {
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            text-decoration: none;
+            color: $text_color_gray;
+            min-width: 120px;
+            &:hover {
+                background-color: #787878;
+                
+            }
+        }
+        li {
+            margin: 0 0.50em 0 0.50em;
+        }
+        ul {
+            justify-content: flex-end;
+            height: 100%;
+            list-style-type: none;
+        }
+    }
+    
 }
 
 #section_welcome {
@@ -158,54 +298,4 @@ p {
             font-style: italic;
         }
     }
-}
-
-@media screen and (max-width: 609px) {
-    #section_projects {
-        height: 135vh;
-        .project_card_wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            align-items: center;
-        }
-        .project_card {
-            width: 250px;
-            height: 250px;
-        }
-    }
-    #section_contacts {
-        h1 {
-            text-align: center;
-        }
-        .icons {
-            display: flex;
-            flex-direction: column;
-        }
-
-    }
-}
-
-@media screen and (min-width: 610px) and (max-width: 799px) {
-    #section_projects {
-        height: 120vh;
-        .project_card_wrapper {
-            grid-auto-rows: 30vh;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .project_card {
-            min-width: 280px;
-        }
-    }
-}
-
-@media screen and (min-width: 800px) and (max-width: 1000px) {
-    #section_projects {
-        .project_card_wrapper {
-            grid-auto-rows: 50vh;
-        }
-        .project_card {
-            min-width: 180px;
-        }
-    }
-}
+} */
